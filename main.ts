@@ -16,6 +16,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, 
     if (currentCount == 3) {
         level2Setup()
         currentCount = 0
+        info.changeScoreBy(1)
     }
 })
 function level1Setup () {
@@ -33,10 +34,12 @@ function level1Setup () {
     controller.moveSprite(emit)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, otherSprite) {
-    timer.after(500, function () {
-    	
-    })
+    currentCount += 1
     otherSprite.destroy()
+    emit.setImage(assets.image`gasTrap`)
+    timer.after(600, function () {
+        emit.setImage(assets.image`myImage`)
+    })
 })
 let currentCount = 0
 let ghg3: Sprite = null
