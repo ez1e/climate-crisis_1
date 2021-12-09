@@ -1,5 +1,5 @@
 function level2Setup () {
-    tiles.setTilemap(tilemap`level1`)
+    tiles.setTilemap(tilemap`level0`)
     emit = sprites.create(assets.image`myImage`, SpriteKind.Player)
     scene.cameraFollowSprite(emit)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
@@ -22,3 +22,4 @@ function level1Setup () {
 }
 let emit: Sprite = null
 level1Setup()
+level2Setup()
