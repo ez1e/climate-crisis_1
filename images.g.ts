@@ -136,6 +136,25 @@ f f f f f e f f f f c c f
 . . . . . f f 1 1 f f f . . . . 
 . . . . . . f f f f . . . . . . 
 `;
+            case "image8":
+            case "gasTrap":return img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f 1 1 1 1 1 1 1 1 f f . 
+f 1 9 9 9 9 9 9 9 9 1 f . 
+f 1 1 1 1 1 1 1 1 1 1 f . 
+f 1 1 9 9 9 9 9 9 1 1 f . 
+f f 1 1 1 1 1 1 1 1 f f . 
+. f f 1 9 9 9 9 1 f f . . 
+. f e f 1 1 1 1 f e f . . 
+. . f f 1 9 9 1 f f . . . 
+. f f b f 2 2 f b f f . . 
+. e 4 7 f f f f 7 4 e . . 
+. e e 6 6 6 6 6 6 e e . . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`;
         }
         return null;
     })

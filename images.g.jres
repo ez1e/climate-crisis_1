@@ -34,6 +34,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "gas3"
     },
+    "image8": {
+        "data": "hwQNABAAAAAA8P//AAAAAAD/EfH/8O4A8B8ZEe//5ADwHxkZ8b9n//8fGRkZ8W///x8ZGRkpbw//HxkZGSlvD/8cGRkZ8W//8B8ZGfG/Z//wHxkR7//kAAD/EfH/8O4AAPD//wAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "gasTrap"
+    },
     "anim2": {
         "namespace": "myAnimations",
         "id": "anim2",

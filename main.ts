@@ -33,8 +33,10 @@ function level1Setup () {
     controller.moveSprite(emit)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, otherSprite) {
+    timer.after(500, function () {
+    	
+    })
     otherSprite.destroy()
-    currentCount += 1
 })
 let currentCount = 0
 let ghg3: Sprite = null
