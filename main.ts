@@ -1,5 +1,5 @@
 function level2Setup () {
-    tiles.setTilemap(tilemap`level0`)
+    tiles.setTilemap(tilemap`l2`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
 }
@@ -11,7 +11,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, 
     level2Setup()
 })
 function level1Setup () {
-    tiles.setTilemap(tilemap`level1`)
+    tiles.setTilemap(tilemap`l1`)
     emit = sprites.create(assets.image`myImage`, SpriteKind.Player)
     scene.cameraFollowSprite(emit)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
