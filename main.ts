@@ -1,5 +1,7 @@
 function level2Setup () {
     tiles.setTilemap(tilemap`level0`)
+    tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
+    emit.setVelocity(1, 1)
 }
 function levelPassed () {
     info.changeScoreBy(1)
