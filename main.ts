@@ -35,9 +35,9 @@ function level1Setup () {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, otherSprite) {
     currentCount += 1
-    otherSprite.destroy()
     emit.setImage(assets.image`gasTrap`)
-    timer.after(600, function () {
+    otherSprite.destroy()
+    timer.after(500, function () {
         emit.setImage(assets.image`myImage`)
     })
 })
