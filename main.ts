@@ -74,7 +74,7 @@ function splashScreen () {
     scene.cameraFollowSprite(emit)
 }
 function level5Setup () {
-    info.startCountdown(60)
+    info.startCountdown(50)
     tiles.setTilemap(tilemap`l5`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
@@ -94,7 +94,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, o
     })
 })
 function level4Setup () {
-    info.startCountdown(50)
+    info.startCountdown(45)
     tiles.setTilemap(tilemap`l4`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
