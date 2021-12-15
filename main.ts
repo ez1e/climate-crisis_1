@@ -22,6 +22,17 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`startGame`, function (sprite, location) {
     level1Setup()
 })
+function level3Setup () {
+    tiles.setTilemap(tilemap`l3`)
+    tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
+    emit.setVelocity(1, 1)
+    ghg1 = sprites.create(assets.image`gas1`, SpriteKind.collectable)
+    ghg2 = sprites.create(assets.image`gas2`, SpriteKind.collectable)
+    ghg3 = sprites.create(assets.image`gas3`, SpriteKind.collectable)
+    tiles.placeOnTile(ghg1, tiles.getTileLocation(4, 17))
+    tiles.placeOnTile(ghg2, tiles.getTileLocation(5, 2))
+    tiles.placeOnTile(ghg3, tiles.getTileLocation(11, 7))
+}
 function level1Setup () {
     tiles.setTilemap(tilemap`l1`)
     ghg1 = sprites.create(assets.image`gas1`, SpriteKind.collectable)
