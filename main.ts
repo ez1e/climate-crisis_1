@@ -13,8 +13,12 @@ function level2Setup () {
     tiles.placeOnTile(ghg3, tiles.getTileLocation(3, 14))
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, location) {
-    if (currentCount == 3) {
+    if (currentCount == 3 && info.score() == 0) {
         level2Setup()
+        currentCount = 0
+        info.changeScoreBy(1)
+    }
+    if (currentCount == 3 && info.score() == 1) {
         currentCount = 0
         info.changeScoreBy(1)
     }
