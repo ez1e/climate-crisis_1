@@ -19,6 +19,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, 
         info.changeScoreBy(1)
     }
     if (currentCount == 3 && info.score() == 1) {
+        level3Setup()
         currentCount = 0
         info.changeScoreBy(1)
     }
