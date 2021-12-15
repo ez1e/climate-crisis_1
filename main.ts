@@ -28,6 +28,16 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`end-tile`, function (sprite, 
         currentCount = 0
         info.changeScoreBy(1)
     }
+    if (currentCount == 3 && info.score() == 3) {
+        level5Setup()
+        currentCount = 0
+        info.changeScoreBy(1)
+    }
+    if (currentCount == 3 && info.score() == 4) {
+        game.over(true)
+        currentCount = 0
+        info.changeScoreBy(1)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`startGame`, function (sprite, location) {
     level1Setup()
@@ -44,6 +54,7 @@ function level3Setup () {
     tiles.placeOnTile(ghg3, tiles.getTileLocation(11, 7))
 }
 function level1Setup () {
+    info.startCountdown(30)
     tiles.setTilemap(tilemap`l1`)
     ghg1 = sprites.create(assets.image`gas1`, SpriteKind.collectable)
     ghg2 = sprites.create(assets.image`gas2`, SpriteKind.collectable)
@@ -59,6 +70,17 @@ function splashScreen () {
     emit = sprites.create(assets.image`myImage`, SpriteKind.Player)
     controller.moveSprite(emit)
     scene.cameraFollowSprite(emit)
+}
+function level5Setup () {
+    tiles.setTilemap(tilemap`l5`)
+    tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
+    emit.setVelocity(1, 1)
+    ghg1 = sprites.create(assets.image`gas1`, SpriteKind.collectable)
+    ghg2 = sprites.create(assets.image`gas2`, SpriteKind.collectable)
+    ghg3 = sprites.create(assets.image`gas3`, SpriteKind.collectable)
+    tiles.placeOnTile(ghg1, tiles.getTileLocation(17, 20))
+    tiles.placeOnTile(ghg2, tiles.getTileLocation(16, 7))
+    tiles.placeOnTile(ghg3, tiles.getTileLocation(5, 6))
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, otherSprite) {
     currentCount += 1
