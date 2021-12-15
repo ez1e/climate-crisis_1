@@ -2,6 +2,7 @@ namespace SpriteKind {
     export const collectable = SpriteKind.create()
 }
 function level2Setup () {
+    info.startCountdown(35)
     tiles.setTilemap(tilemap`l2`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
@@ -43,6 +44,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`startGame`, function (sprite,
     level1Setup()
 })
 function level3Setup () {
+    info.startCountdown(40)
     tiles.setTilemap(tilemap`l3`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
@@ -72,6 +74,7 @@ function splashScreen () {
     scene.cameraFollowSprite(emit)
 }
 function level5Setup () {
+    info.startCountdown(60)
     tiles.setTilemap(tilemap`l5`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
@@ -91,6 +94,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.collectable, function (sprite, o
     })
 })
 function level4Setup () {
+    info.startCountdown(50)
     tiles.setTilemap(tilemap`l4`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
