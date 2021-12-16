@@ -56,7 +56,7 @@ function level3Setup () {
     tiles.placeOnTile(ghg3, tiles.getTileLocation(11, 7))
 }
 function level1Setup () {
-    info.startCountdown(30)
+    info.startCountdown(45)
     tiles.setTilemap(tilemap`l1`)
     ghg1 = sprites.create(assets.image`gas1`, SpriteKind.collectable)
     ghg2 = sprites.create(assets.image`gas2`, SpriteKind.collectable)
