@@ -111,4 +111,5 @@ let ghg2: Sprite = null
 let ghg1: Sprite = null
 let emit: Sprite = null
 info.setScore(0)
+console.log("Your name is Emit. You are a time traveler sent back to the past to collect the excess greenhouse gasses present in the atmosphere to help stop the global disaster caused by them in the future")
 splashScreen()
