@@ -74,7 +74,7 @@ function splashScreen () {
     scene.cameraFollowSprite(emit)
 }
 function level5Setup () {
-    info.startCountdown(50)
+    info.startCountdown(60)
     tiles.setTilemap(tilemap`l5`)
     tiles.placeOnRandomTile(emit, assets.tile`teleporter`)
     emit.setVelocity(1, 1)
